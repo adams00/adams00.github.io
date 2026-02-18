@@ -58,7 +58,14 @@
 
 <script>
   function showNumber(id, parts) {
-    document.getElementById(id).textContent = parts.join("");
+    const number = parts.join("");          // visible number
+    const tel = parts.join("").replace(/[^+\d]/g, ""); // stripped for tel: link
+
+    const link = document.createElement("a");
+    link.href = "tel:" + tel;
+    link.textContent = number;
+
+    document.getElementById(id).appendChild(link);
   }
 
   showNumber("bogda", [ "601", "946",  "996"]);
