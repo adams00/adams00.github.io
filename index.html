@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Aleks</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .box { border: 2px solid #333; padding: 20px; max-width: 400px; }
+  </style>
+</head>
+<body>
+
+<div class="box">
+<span style="display:none">111-111-111</span>
+  <h2>Jeśli znalazłeś Aleksa</h2>
+  <p>Skontaktuj się z właścicielami:</p>
+
+  <p>
+    <strong>Bogusława:</strong>
+    <span id="bogda"></span>
+  </p>
+
+  <p>
+    <strong>Anna:</strong>
+    <span id="anna"></span>
+  </p>
+
+    <p>
+    <strong>Adam:</strong>
+    <span id="adam"></span>
+  </p>
+</div>
+
+<script>
+  function showNumber(id, parts) {
+    document.getElementById(id).textContent = parts.join("");
+  }
+
+  showNumber("bogda", [ "601", "946",  "996"]);
+  showNumber("anna", [ "693",  "268",  "447"]);
+  showNumber("adam", [ "722",  "019",  "018"])
+</script>
+
+</body>
+</html>
